@@ -23,14 +23,14 @@ export const EventsSection: FC = () => {
                 {event.iconUrl && <img src={event.iconUrl} alt="" aria-hidden="true" className="w-5 h-5 text-accent" />}
               </div>
 
-              <div className="flex items-center gap-4 text-xs font-body text-text-secondary">
-                <div className="flex items-center gap-1.5">
-                  <img src={calendarioIcon} alt="" aria-hidden="true" className="w-3.5 h-3.5 opacity-70" />
+              <div className="flex flex-col gap-2.5 text-sm font-body text-text-secondary mt-1 mb-2">
+                <div className="flex items-center gap-2">
+                  <img src={calendarioIcon} alt="" aria-hidden="true" className="w-4 h-4 opacity-70 shrink-0" />
                   <span>{event.date}</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <img src={pinoMapaIcon} alt="" aria-hidden="true" className="w-3.5 h-3.5 opacity-70" />
-                  <span>{event.location}</span>
+                <div className="flex items-start gap-2">
+                  <img src={pinoMapaIcon} alt="" aria-hidden="true" className="w-4 h-4 opacity-70 shrink-0 mt-0.5" />
+                  <span className="leading-tight">{event.location}</span>
                 </div>
               </div>
 
