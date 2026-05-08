@@ -19,8 +19,8 @@ export const EventsSection: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {mockEvents.map((event) => (
             <CardBase key={event.id}>
-              <div className="w-10 h-10 rounded bg-accent/10 flex items-center justify-center mb-2">
-                {event.iconUrl && <img src={event.iconUrl} alt="" aria-hidden="true" className="w-5 h-5 text-accent" />}
+              <div className="mb-4 h-7 flex justify-start">
+                {event.iconUrl && <img src={event.iconUrl} alt="" aria-hidden="true" className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />}
               </div>
 
               <div className="flex flex-col gap-2.5 text-sm font-body text-text-secondary mt-1 mb-2">

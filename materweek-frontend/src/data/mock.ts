@@ -1,13 +1,12 @@
 import type { EventItem, Sponsor } from '../types';
 
-import escudoIcon from '../assets/escudo.svg';
-import nuvemIcon from '../assets/nuvem.svg';
-import roboIcon from '../assets/robo.svg';
+import sebraeLogo from '../assets/sebrae.svg';
+
 
 export const mockEvents: EventItem[] = [
   {
     id: '1',
-    iconUrl: roboIcon,
+    iconUrl: sebraeLogo,
     date: '18 / jun às 19h',
     location: 'Centro Regional de Eventos de Pato Branco',
     title: 'Thiago Concer',
@@ -16,7 +15,7 @@ export const mockEvents: EventItem[] = [
   },
   {
     id: '2',
-    iconUrl: nuvemIcon,
+    iconUrl: sebraeLogo,
     date: '19 / jun às 19h',
     location: 'Centro Regional de Eventos de Pato Branco',
     title: 'Caito Maia',
@@ -25,7 +24,7 @@ export const mockEvents: EventItem[] = [
   },
   {
     id: '3',
-    iconUrl: escudoIcon,
+    iconUrl: sebraeLogo,
     date: '20 / jun às 17h',
     location: 'Centro Regional de Eventos de Pato Branco',
     title: 'João Branco',
