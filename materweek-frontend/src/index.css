@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=geist@400,500,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #001F24;
+  --color-surface: #2E3638;
+  
+  --color-header-bg: #0D1516CC;
+  --color-header-border: #3B494C1A;
+  --color-card-border: #3B494C;
+  
+  --color-accent: #00E5FF;
+  --color-accent-hover: #00DAF3;
+  --color-accent-transparent: #00DAF31A;
+  
+  --color-text-primary: #DCE4E5;
+  --color-text-secondary: #BAC9CC;
+  --color-text-dark: #001F24;
+
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-action: 'Geist', sans-serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
