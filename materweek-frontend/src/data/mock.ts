@@ -1,5 +1,6 @@
 import type { EventItem, Sponsor } from '../types';
 
+import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
 
@@ -30,13 +31,36 @@ export const mockEvents: EventItem[] = [
     title: 'João Branco',
     description: 'Considerado um dos 10 melhores profissionais de Marketing do Brasil, ex-VP de Marketing do McDonald\'s.',
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
+  },
+  {
+    id: '4',
+    iconUrl: SILogo,
+    date: '15 / jun às 19h',
+    location: 'Auditório UNIMATER',
+    title: 'Edison Figueira Junior',
+    description: 'Palestra: Transformando Problemas em Inovação com Inteligência Artificial.',
+    linkUrl: 'https://www.materdei.edu.br/pt',
+  },
+  {
+    id: '5',
+    iconUrl: SILogo,
+    date: '16 / jun às 19h',
+    location: 'Auditório UNIMATER',
+    title: 'Rafael Fernando Dal Bosco e Alessandro Graczyk Moraes',
+    description: 'Talk: Além da Ideia: Crescimento, Escala e Sobrevivência',
+    linkUrl: 'https://www.materdei.edu.br/pt',
+  },
+  {
+    id: '6',
+    iconUrl: SILogo,
+    date: '16 / jun às 19h',
+    location: 'Auditório UNIMATER',
+    title: 'Eduardo Harthecopf',
+    description: 'Workshop: Growth Marketing na prática: como tecnologia, dados e criatividade aceleram o crescimento de um negócio',
+    linkUrl: 'https://www.materdei.edu.br/pt',
   }
 ];
 
 export const mockSponsors: Sponsor[] = [
-  { id: '1', name: 'GLOBAL_TECH', logoUrl: '', altText: 'Global Tech Logo' },
-  { id: '2', name: 'NEXUS_SYS', logoUrl: '', altText: 'Nexus Sys Logo' },
-  { id: '3', name: 'CYBER_CORE', logoUrl: '', altText: 'Cyber Core Logo' },
-  { id: '4', name: 'CLOUD_NINE', logoUrl: '', altText: 'Cloud Nine Logo' },
-  { id: '5', name: 'QUANTUM_AI', logoUrl: '', altText: 'Quantum AI Logo' }
+  { id: '1', name: 'GLOBAL_TECH', logoUrl: '', altText: 'Global Tech Logo' }
 ];

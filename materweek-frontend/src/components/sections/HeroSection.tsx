@@ -9,7 +9,7 @@ export const HeroSection: FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,229,255,0.05)_0,transparent_50%)] pointer-events-none" />
 
       <Badge className="mb-8">
-        Semana Acadêmica de Sistemas de Informação - 2026
+        Semana Acadêmica de SI e ADS  - 2026
       </Badge>
 
       <Typography variant="h1" className="mb-6 max-w-3xl">
