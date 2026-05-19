@@ -8,6 +8,11 @@ import calendarioIcon from '../../assets/calendario.svg';
 import pinoMapaIcon from '../../assets/pino_mapa.svg';
 
 export const EventsSection: FC = () => {
+  // 1. Cria uma cópia da array e ordena pela data (da mais próxima para a mais distante)
+  const sortedEvents = [...mockEvents].sort((a, b) => {
+    return new Date(a.date).getTime() - new Date(b.date).getTime();
+  });
+
   return (
     <section id="eventos" className="px-6 py-12 flex flex-col gap-8 scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
@@ -17,7 +22,8 @@ export const EventsSection: FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mockEvents.map((event) => (
+          {/* 2. Mapeia a nova array 'sortedEvents' em vez da 'mockEvents' */}
+          {sortedEvents.map((event) => (
             <CardBase key={event.id}>
               <div className="mb-4 h-7 flex justify-start">
                 {event.iconUrl && <img src={event.iconUrl} alt="" aria-hidden="true" className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />}

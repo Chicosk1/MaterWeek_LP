@@ -13,11 +13,11 @@ export const HeroSection: FC = () => {
       </Badge>
 
       <Typography variant="h1" className="mb-6 max-w-3xl">
-        Do Código ao Mercado: <span className="text-accent">Transforme</span> suas <span className="text-accent">Ideias</span>.
+        Do Ideia ao Mercado: <span className="text-accent">Construa</span>, <span className="text-accent">Valide</span> e faça <span className="text-accent">Crescer</span>.
       </Typography>
 
       <Typography variant="body" className="mb-10 max-w-2xl mx-auto md:text-lg">
-        Uma imersão profunda no universo tech. Conecte-se com especialistas, descubra as tecnologias que estão moldando o amanhã e eleve suas habilidades em desenvolvimento, design e empreendedorismo.
+        Conecte-se com empreendedores, especialistas e profissionais do mercado para aprender como transformar problemas reais em produtos, validar ideias, crescer com estratégia e criar oportunidades no universo da tecnologia e inovação.
       </Typography>
 
       <div className="flex flex-col md:flex-row w-full gap-4 max-w-md mx-auto justify-center">
