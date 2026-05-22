@@ -7,7 +7,6 @@ import calendarioIcon from '../../assets/calendario.svg';
 import pinoMapaIcon from '../../assets/pino_mapa.svg';
 
 const AUTO_PLAY_MS = 6000;
-const HEX_CLIP = 'polygon(25% 4%, 75% 4%, 99% 50%, 75% 96%, 25% 96%, 1% 50%)';
 
 function getTopic(event: EventItem): string {
   if (event.topic) return event.topic.toUpperCase();
@@ -28,6 +27,49 @@ function getInitials(name: string): string {
     .map((w) => w[0]?.toUpperCase() ?? '')
     .join('');
 }
+
+interface PortraitProps {
+  photos?: string[];
+  name: string;
+  className?: string;
+}
+
+const Portrait: FC<PortraitProps> = ({ photos, name, className = '' }) => {
+  if (!photos || photos.length === 0) {
+    return (
+      <div
+        className={`flex items-center justify-center text-text-primary/70 font-heading font-bold text-6xl md:text-8xl tracking-tight ${className}`}
+      >
+        {getInitials(name)}
+      </div>
+    );
+  }
+
+  if (photos.length === 1) {
+    return (
+      <img
+        src={photos[0]}
+        alt=""
+        loading="lazy"
+        className={`object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)] ${className}`}
+      />
+    );
+  }
+
+  return (
+    <div className={`flex items-end justify-center gap-1 ${className}`}>
+      {photos.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt=""
+          loading="lazy"
+          className="h-full max-w-[55%] object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)]"
+        />
+      ))}
+    </div>
+  );
+};
 
 export const SpeakerCarousel: FC = () => {
   const speakers = [...mockEvents].sort(
@@ -54,7 +96,7 @@ export const SpeakerCarousel: FC = () => {
   const next = () => goTo(index + 1);
 
   return (
-    <section id="palestrantes" className="px-6 py-16 scroll-mt-20">
+    <section id="palestrantes" className="px-6 py-16 md:py-24 scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
         <div className="mb-8 text-center md:text-left">
           <Typography variant="h2" className="mb-2">Palestrantes em destaque</Typography>
@@ -68,42 +110,35 @@ export const SpeakerCarousel: FC = () => {
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,229,255,0.10)_0,transparent_60%)] rounded-2xl pointer-events-none" />
 
-          {/* Floating speaker portrait */}
+          {/* Mobile portrait: stacked above content */}
+          <div className="md:hidden relative h-60 flex items-end justify-center" aria-hidden="true">
+            <div className="absolute inset-x-8 top-4 bottom-0 bg-[radial-gradient(circle_at_50%_70%,rgba(0,229,255,0.22)_0%,rgba(124,92,255,0.10)_45%,transparent_70%)] pointer-events-none" />
+            <Portrait
+              key={`m-${current.id}`}
+              photos={current.photoUrls}
+              name={current.title}
+              className="relative h-64 max-w-full animate-fade-in"
+            />
+          </div>
+
+          {/* Desktop portrait: floating right side, anchored bottom, extending above top */}
           <div
+            className="hidden md:flex absolute -top-12 bottom-0 right-4 lg:right-10 w-[320px] lg:w-[400px] items-end justify-center pointer-events-none"
             aria-hidden="true"
-            className="absolute z-10 right-4 -top-6 w-28 h-32 sm:w-36 sm:h-40 md:right-10 md:-top-10 md:w-56 md:h-64 lg:w-64 lg:h-72 drop-shadow-[0_0_30px_rgba(0,229,255,0.25)]"
           >
-            <div className="relative w-full h-full">
-              <div
-                className="absolute inset-0 bg-[linear-gradient(135deg,#00E5FF_0%,#7C5CFF_60%,#FF4DD2_100%)]"
-                style={{ clipPath: HEX_CLIP }}
-              />
-              <div
-                className="absolute inset-[3px] bg-background"
-                style={{ clipPath: HEX_CLIP }}
-              />
-              {current.photoUrl ? (
-                <img
-                  src={current.photoUrl}
-                  alt=""
-                  className="absolute inset-[6px] w-[calc(100%-12px)] h-[calc(100%-12px)] object-cover"
-                  style={{ clipPath: HEX_CLIP }}
-                />
-              ) : (
-                <div
-                  className="absolute inset-[6px] flex items-center justify-center bg-surface text-text-primary/80 font-heading font-bold text-2xl md:text-4xl"
-                  style={{ clipPath: HEX_CLIP }}
-                >
-                  {getInitials(current.title)}
-                </div>
-              )}
-            </div>
+            <div className="absolute inset-x-2 top-6 bottom-4 bg-[radial-gradient(circle_at_50%_60%,rgba(0,229,255,0.20)_0%,rgba(124,92,255,0.10)_45%,transparent_70%)]" />
+            <Portrait
+              key={`d-${current.id}`}
+              photos={current.photoUrls}
+              name={current.title}
+              className="relative w-full h-full animate-fade-in"
+            />
           </div>
 
           {/* Content */}
           <div
             key={current.id}
-            className="relative p-6 pt-28 pr-6 md:p-12 md:pr-72 lg:pr-80 min-h-[22rem] flex flex-col gap-4 animate-fade-in"
+            className="relative p-6 md:p-12 md:pr-[360px] lg:pr-[440px] min-h-[26rem] flex flex-col gap-4 animate-fade-in"
           >
             <span className="font-action text-xs md:text-sm tracking-[0.25em] uppercase text-accent">
               {getTopic(current)}

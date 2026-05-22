@@ -6,7 +6,7 @@ export interface EventItem {
   description: string;
   iconUrl?: string;
   linkUrl: string;
-  photoUrl?: string;
+  photoUrls?: string[];
   topic?: string;
 }
 
