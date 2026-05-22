@@ -20,7 +20,7 @@ export const mockEvents: EventItem[] = [
     date: '15 / jun às 20:45h',
     location: 'Auditório UNIMATER',
     title: 'Leila Voss',
-    description: 'Workshop - Resolvendo Problemas com Design Thinking',
+    description: 'Dinâmica - Identificar problemas, transformá-los em ideias e posteriormente em produtos',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
