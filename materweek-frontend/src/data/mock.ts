@@ -43,6 +43,24 @@ export const mockEvents: EventItem[] = [
   },
   {
     id: '5',
+    iconUrl: SILogo,
+    date: '17 / jun às 19:30h',
+    location: 'Auditório UNIMATER',
+    title: 'Kauhe Tissiani',
+    description: 'Palestra - Gestão comercial e os desafios na comercialização de softwares',
+    linkUrl: 'https://www.materdei.edu.br/pt',
+  },
+  {
+    id: '6',
+    iconUrl: SILogo,
+    date: '16 / jun às 20:45h',
+    location: 'Auditório UNIMATER',
+    title: 'Roger Alexandre Rossoni',
+    description: 'Palestra - Captação de Recursos',
+    linkUrl: 'https://www.materdei.edu.br/pt',
+  },
+  {
+    id: '7',
     iconUrl: sebraeLogo,
     date: '18 / jun às 19:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
@@ -51,7 +69,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
   },
   {
-    id: '6',
+    id: '8',
     iconUrl: sebraeLogo,
     date: '19 / jun às 19:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
@@ -60,7 +78,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
   },
   {
-    id: '7',
+    id: '9',
     iconUrl: sebraeLogo,
     date: '20 / jun às 17:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
