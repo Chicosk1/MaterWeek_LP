@@ -6,6 +6,8 @@ export interface EventItem {
   description: string;
   iconUrl?: string;
   linkUrl: string;
+  photoUrl?: string;
+  topic?: string;
 }
 
 export interface Sponsor {
