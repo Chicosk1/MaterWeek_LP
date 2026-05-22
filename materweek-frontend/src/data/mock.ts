@@ -53,7 +53,7 @@ export const mockEvents: EventItem[] = [
   {
     id: '6',
     iconUrl: SILogo,
-    date: '16 / jun às 20:45h',
+    date: '17 / jun às 20:45h',
     location: 'Auditório UNIMATER',
     title: 'Roger Alexandre Rossoni',
     description: 'Palestra - Captação de Recursos',
