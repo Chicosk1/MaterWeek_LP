@@ -13,7 +13,7 @@ export const HeroSection: FC = () => {
       </Badge>
 
       <Typography variant="h1" className="mb-6 max-w-3xl">
-        Do Ideia ao Mercado: <span className="text-accent">Construa</span>, <span className="text-accent">Valide</span> e faça <span className="text-accent">Crescer</span>.
+        Da Ideia ao Mercado: <span className="text-accent">Construa</span>, <span className="text-accent">Valide</span> e faça <span className="text-accent">Crescer</span>.
       </Typography>
 
       <Typography variant="body" className="mb-10 max-w-2xl mx-auto md:text-lg">

@@ -11,11 +11,20 @@ export const mockEvents: EventItem[] = [
     date: '15 / jun às 19:30h',
     location: 'Auditório UNIMATER',
     title: 'Edison Figueira Junior',
-    description: 'Palestra: Transformando Problemas em Inovação com Inteligência Artificial.',
+    description: 'Palestra: A Nova Engenharia de Software: IA, Agentes e Mentalidade Empreendedora',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
     id: '2',
+    iconUrl: SILogo,
+    date: '15 / jun às 20:45h',
+    location: 'Auditório UNIMATER',
+    title: 'Leila Voss',
+    description: 'Workshop - Resolvendo Problemas com Design Thinking',
+    linkUrl: 'https://www.materdei.edu.br/pt',
+  },
+  {
+    id: '3',
     iconUrl: SILogo,
     date: '16 / jun às 19:30h',
     location: 'Auditório UNIMATER',
@@ -24,7 +33,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
-    id: '3',
+    id: '4',
     iconUrl: SILogo,
     date: '16 / jun às 20:45h',
     location: 'Auditório UNIMATER',
@@ -33,7 +42,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
-    id: '4',
+    id: '5',
     iconUrl: sebraeLogo,
     date: '18 / jun às 19:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
@@ -42,7 +51,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
   },
   {
-    id: '5',
+    id: '6',
     iconUrl: sebraeLogo,
     date: '19 / jun às 19:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
@@ -51,7 +60,7 @@ export const mockEvents: EventItem[] = [
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
   },
   {
-    id: '6',
+    id: '7',
     iconUrl: sebraeLogo,
     date: '20 / jun às 17:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
