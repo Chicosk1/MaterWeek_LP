@@ -11,7 +11,7 @@ export const mockEvents: EventItem[] = [
     date: '15 / jun às 19:30h',
     location: 'Auditório UNIMATER',
     title: 'Edison Figueira Junior',
-    description: 'Palestra: A Nova Engenharia de Software: IA, Agentes e Mentalidade Empreendedora',
+    description: 'Palestra - A Nova Engenharia de Software: IA, Agentes e Mentalidade Empreendedora',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
@@ -20,7 +20,7 @@ export const mockEvents: EventItem[] = [
     date: '15 / jun às 20:45h',
     location: 'Auditório UNIMATER',
     title: 'Leila Voss',
-    description: 'Dinâmica - Identificar problemas, transformá-los em ideias e posteriormente em produtos',
+    description: 'Dinâmica - Do Problema a Solução: Tranformando Ideias em Inovação',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
@@ -29,7 +29,7 @@ export const mockEvents: EventItem[] = [
     date: '16 / jun às 19:30h',
     location: 'Auditório UNIMATER',
     title: 'Rafael Fernando Dal Bosco e Alessandro Graczyk Moraes',
-    description: 'Talk: Além da Ideia: Crescimento, Escala e Sobrevivência',
+    description: 'Talk - Além da Ideia: Crescimento, Escala e Sobrevivência',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
@@ -38,7 +38,7 @@ export const mockEvents: EventItem[] = [
     date: '16 / jun às 20:45h',
     location: 'Auditório UNIMATER',
     title: 'Eduardo Harthecopf',
-    description: 'Workshop: Growth Marketing na prática: como tecnologia, dados e criatividade aceleram o crescimento de um negócio',
+    description: 'Workshop - Growth Marketing na prática: como tecnologia, dados e criatividade aceleram o crescimento de um negócio',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
@@ -56,7 +56,7 @@ export const mockEvents: EventItem[] = [
     date: '17 / jun às 20:45h',
     location: 'Auditório UNIMATER',
     title: 'Roger Alexandre Rossoni',
-    description: 'Palestra - Captação de Recursos',
+    description: 'Palestra - Quem quer Dinheiro? Captação de Recursos e Estruturação de Projetos',
     linkUrl: 'https://www.materdei.edu.br/pt',
   },
   {
