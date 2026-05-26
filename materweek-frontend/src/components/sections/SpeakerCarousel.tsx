@@ -174,7 +174,7 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
 
             <div className="pt-4 flex items-center justify-between gap-4 flex-wrap">
               <a
-                href="https://www.materdei.edu.br/pt"
+                href={current.linkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
