@@ -3,7 +3,8 @@ export interface EventItem {
   date: string;
   location: string;
   title: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string;
   iconUrl?: string;
   linkUrl: string;
   photoUrls?: string[];

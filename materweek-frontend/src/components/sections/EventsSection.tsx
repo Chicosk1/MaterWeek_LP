@@ -50,7 +50,7 @@ export const EventsSection: FC<EventsSectionProps> = ({ onSpeakerFocus }) => {
 
               <div className="flex flex-col gap-2">
                 <Typography variant="h3">{event.title}</Typography>
-                <Typography variant="small">{event.description}</Typography>
+                <Typography variant="small">{event.shortDescription}</Typography>
               </div>
 
               <div className="mt-auto pt-2 flex justify-start">

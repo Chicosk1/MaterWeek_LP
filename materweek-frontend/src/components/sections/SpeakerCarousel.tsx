@@ -10,14 +10,7 @@ import pinoMapaIcon from '../../assets/pino_mapa.svg';
 const AUTO_PLAY_MS = 6000;
 
 function getTopic(event: EventItem): string {
-  if (event.topic) return event.topic.toUpperCase();
-  const match = event.description.match(/^(Palestra|Talk|Workshop|Dinâmica)/i);
-  return match ? match[1].toUpperCase() : 'PALESTRANTE CONVIDADO';
-}
-
-function getTalkBody(event: EventItem): string {
-  const match = event.description.match(/^(?:Palestra|Talk|Workshop|Dinâmica)\s*[:\-–]\s*(.*)$/i);
-  return match ? match[1] : event.description;
+  return event.topic ?? 'PALESTRANTE CONVIDADO';
 }
 
 function getInitials(name: string): string {
@@ -122,13 +115,13 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,229,255,0.10)_0,transparent_60%)] rounded-2xl pointer-events-none" />
 
           {/* Mobile portrait: stacked above content */}
-          <div className="md:hidden relative h-60 flex items-end justify-center" aria-hidden="true">
+          <div className="md:hidden relative h-52 overflow-hidden flex items-end justify-center" aria-hidden="true">
             <div className="absolute inset-x-8 top-4 bottom-0 bg-[radial-gradient(circle_at_50%_70%,rgba(0,229,255,0.22)_0%,rgba(124,92,255,0.10)_45%,transparent_70%)] pointer-events-none" />
             <Portrait
               key={`m-${current.id}`}
               photos={current.photoUrls}
               name={current.title}
-              className="relative h-64 max-w-full animate-fade-in"
+              className="relative h-52 max-w-full animate-fade-in"
             />
           </div>
 
@@ -149,7 +142,7 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
           {/* Content */}
           <div
             key={current.id}
-            className="relative p-6 md:p-12 md:pr-[360px] lg:pr-[440px] min-h-[26rem] flex flex-col gap-4 animate-fade-in"
+            className="relative p-6 md:p-12 md:pr-[360px] lg:pr-[440px] h-[26rem] flex flex-col gap-4 animate-fade-in overflow-hidden"
           >
             <span className="font-action text-xs md:text-sm tracking-[0.25em] uppercase text-accent">
               {getTopic(current)}
@@ -170,8 +163,8 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
               </div>
             </div>
 
-            <Typography variant="body" className="max-w-2xl">
-              {getTalkBody(current)}
+            <Typography variant="body" className="max-w-2xl line-clamp-4">
+              {current.longDescription}
             </Typography>
 
             <div className="mt-auto pt-8 flex items-center justify-between gap-4 flex-wrap">
