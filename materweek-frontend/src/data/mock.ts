@@ -28,7 +28,7 @@ export const mockEvents: EventItem[] = [
     topic: 'PALESTRA',
     shortDescription: 'IA, agentes e mentalidade empreendedora na nova engenharia de software.',
     longDescription: 'A Nova Engenharia de Software: IA, Agentes e Mentalidade Empreendedora. Descubra como a inteligência artificial e os agentes autônomos estão redefinindo o papel do engenheiro de software — e o que é preciso desenvolver para prosperar nesse cenário.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [edisonPhoto],
   },
   {
@@ -40,7 +40,7 @@ export const mockEvents: EventItem[] = [
     topic: 'DINÂMICA',
     shortDescription: 'Transformando problemas reais em soluções inovadoras na prática.',
     longDescription: 'Do Problema à Solução: Transformando Ideias em Inovação. Uma dinâmica interativa que guia os participantes pelo processo de identificar dores reais, estruturar hipóteses e prototipar soluções com criatividade e método.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [leilaPhoto],
   },
   {
@@ -52,7 +52,7 @@ export const mockEvents: EventItem[] = [
     topic: 'TALK',
     shortDescription: 'Os desafios reais de crescer, escalar e sobreviver no mercado.',
     longDescription: 'Além da Ideia: Crescimento, Escala e Sobrevivência. Rafael e Alessandro compartilham experiências de quem já passou pelos bastidores do empreendedorismo — as decisões difíceis, os erros que ensinam e as estratégias que realmente funcionam para escalar um negócio.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [rafaelPhoto, alessandroPhoto],
   },
   {
@@ -64,7 +64,7 @@ export const mockEvents: EventItem[] = [
     topic: 'WORKSHOP',
     shortDescription: 'Como tecnologia, dados e criatividade aceleram o crescimento.',
     longDescription: 'Growth Marketing na Prática: Como Tecnologia, Dados e Criatividade Aceleram o Crescimento. Um workshop mão na massa sobre como construir estratégias de crescimento sustentável combinando análise de dados, automação e conteúdo criativo.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [eduardoPhoto],
   },
   {
@@ -76,7 +76,7 @@ export const mockEvents: EventItem[] = [
     topic: 'PALESTRA',
     shortDescription: 'Gestão comercial e os desafios de vender software no mercado atual.',
     longDescription: 'Gestão Comercial e os Desafios na Comercialização de Softwares. Uma visão aprofundada sobre como estruturar times comerciais, construir proposta de valor para produtos de software e superar as objeções mais comuns no processo de venda B2B.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [kauhePhoto],
   },
   {
@@ -88,7 +88,7 @@ export const mockEvents: EventItem[] = [
     topic: 'PALESTRA',
     shortDescription: 'Captação de recursos e estruturação de projetos para quem quer dinheiro.',
     longDescription: 'Quem quer Dinheiro? Captação de Recursos e Estruturação de Projetos. Roger apresenta os principais caminhos para captar investimento — editais, investidores-anjo, venture capital e linhas de fomento — e como estruturar um projeto que realmente convence.',
-    linkUrl: 'https://www.materdei.edu.br/pt',
+    linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [rogerPhoto],
   },
   {
