@@ -1,5 +1,11 @@
 import type { EventItem, Sponsor } from '../types';
 
+import aconcaiaLogo from '../assets/aconcaia.svg';
+import naturalBitLogo from '../assets/Natural-Bit-preto-e-laranja.svg';
+import idsLogo from '../assets/ids.svg';
+import aiqfomeLogo from '../assets/aiqfome.svg';
+import superaLogo from '../assets/supera.svg';
+
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
@@ -103,5 +109,11 @@ export const mockEvents: EventItem[] = [
 ];
 
 export const mockSponsors: Sponsor[] = [
-  { id: '1', name: 'GLOBAL_TECH', logoUrl: '', altText: 'Global Tech Logo' }
+  { id: '1', name: 'Natural Bit', logoUrl: naturalBitLogo, altText: 'Natural Bit Logo' },
+  { id: '2', name: 'Aconcaia', logoUrl: aconcaiaLogo, altText: 'Aconcaia Logo' },
+  { id: '3', name: 'Supera', logoUrl: superaLogo, altText: 'Supera Logo' },
+  { id: '4', name: 'IDS', logoUrl: idsLogo, altText: 'IDS Logo' },
+  { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' }
+  // { id: '6', name: 'Pizarria Franciscana', logoUrl: pizarriaFranciscanaLogo, altText: 'Pizarria Franciscana Logo' },
+  // { id: '7', name: 'Pastelaria Pancera', logoUrl: pastelariaPanceraLogo, altText: 'Pastelaria Pancera Logo' }
 ];
