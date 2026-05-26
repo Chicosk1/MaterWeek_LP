@@ -28,12 +28,28 @@ interface PortraitProps {
   className?: string;
 }
 
+/* Foto circular individual com anel decorativo e glow */
+const CirclePhoto: FC<{ src: string; size?: string }> = ({ src, size = 'w-full' }) => (
+  <div className={`relative aspect-square ${size}`}>
+    {/* Glow suave atrás do círculo */}
+    <div className="absolute inset-0 rounded-full bg-accent/10 blur-2xl pointer-events-none" />
+    {/* Anel decorativo levemente maior que a foto */}
+    <div className="absolute -inset-[6px] rounded-full border border-accent/30 pointer-events-none" />
+    {/* Segundo anel externo mais sutil */}
+    <div className="absolute -inset-[14px] rounded-full border border-accent/10 pointer-events-none" />
+    <img
+      src={src}
+      alt=""
+      loading="lazy"
+      className="relative w-full h-full object-contain drop-shadow-[0_0_28px_rgba(0,229,255,0.5)] animate-fade-in"
+    />
+  </div>
+);
+
 const Portrait: FC<PortraitProps> = ({ photos, name, className = '' }) => {
   if (!photos || photos.length === 0) {
     return (
-      <div
-        className={`flex items-center justify-center text-text-primary/70 font-heading font-bold text-6xl md:text-8xl tracking-tight ${className}`}
-      >
+      <div className={`relative flex items-center justify-center aspect-square rounded-full border border-accent/30 bg-surface text-text-primary/70 font-heading font-bold text-4xl tracking-tight ${className}`}>
         {getInitials(name)}
       </div>
     );
@@ -41,25 +57,17 @@ const Portrait: FC<PortraitProps> = ({ photos, name, className = '' }) => {
 
   if (photos.length === 1) {
     return (
-      <img
-        src={photos[0]}
-        alt=""
-        loading="lazy"
-        className={`object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)] ${className}`}
-      />
+      <div className={`flex items-center justify-center ${className}`}>
+        <CirclePhoto src={photos[0]} size="w-full" />
+      </div>
     );
   }
 
+  /* Dois palestrantes: dois círculos lado a lado */
   return (
-    <div className={`flex items-end justify-center gap-3 ${className}`}>
+    <div className={`flex items-center justify-center gap-4 ${className}`}>
       {photos.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt=""
-          loading="lazy"
-          className="h-[90%] max-w-[46%] object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)]"
-        />
+        <CirclePhoto key={i} src={src} size="w-[46%]" />
       ))}
     </div>
   );
@@ -108,41 +116,58 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
         </div>
 
         <div
-          className="relative bg-surface border border-card-border rounded-2xl"
+          className="relative bg-surface border border-card-border rounded-2xl mx-6"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
+          {/* Seta anterior — lateral esquerda */}
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Palestrante anterior"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-10 h-10 rounded-full bg-surface border border-card-border text-text-primary hover:border-accent hover:text-accent transition-colors flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent"
+          >
+            <span aria-hidden="true">&larr;</span>
+          </button>
+
+          {/* Seta próximo — lateral direita */}
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Próximo palestrante"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 w-10 h-10 rounded-full bg-surface border border-card-border text-text-primary hover:border-accent hover:text-accent transition-colors flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent"
+          >
+            <span aria-hidden="true">&rarr;</span>
+          </button>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,229,255,0.10)_0,transparent_60%)] rounded-2xl pointer-events-none" />
 
-          {/* Mobile portrait: stacked above content */}
-          <div className="md:hidden relative h-52 overflow-hidden flex items-end justify-center" aria-hidden="true">
-            <div className="absolute inset-x-8 top-4 bottom-0 bg-[radial-gradient(circle_at_50%_70%,rgba(0,229,255,0.22)_0%,rgba(124,92,255,0.10)_45%,transparent_70%)] pointer-events-none" />
+          {/* Mobile: círculo(s) centralizado(s) acima do conteúdo */}
+          <div className="md:hidden flex items-center justify-center py-8" aria-hidden="true">
             <Portrait
               key={`m-${current.id}`}
               photos={current.photoUrls}
               name={current.title}
-              className="relative h-52 max-w-full animate-fade-in"
+              className={(current.photoUrls?.length ?? 0) > 1 ? 'w-72' : 'w-44'}
             />
           </div>
 
-          {/* Desktop portrait: floating right side, anchored bottom, extending above top */}
+          {/* Desktop: círculo(s) centralizado(s) verticalmente à direita */}
           <div
-            className="hidden md:flex absolute -top-12 bottom-0 right-4 lg:right-10 w-[320px] lg:w-[400px] items-end justify-center pointer-events-none"
+            className="hidden md:flex absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 w-56 lg:w-64 items-center justify-center pointer-events-none"
             aria-hidden="true"
           >
-            <div className="absolute inset-x-2 top-6 bottom-4 bg-[radial-gradient(circle_at_50%_60%,rgba(0,229,255,0.20)_0%,rgba(124,92,255,0.10)_45%,transparent_70%)]" />
             <Portrait
               key={`d-${current.id}`}
               photos={current.photoUrls}
               name={current.title}
-              className="relative w-full h-full animate-fade-in"
+              className="w-full"
             />
           </div>
 
           {/* Content */}
           <div
             key={current.id}
-            className="relative p-6 md:p-12 md:pr-[360px] lg:pr-[440px] h-[26rem] flex flex-col gap-4 animate-fade-in overflow-hidden"
+            className="relative p-6 md:p-10 md:pr-[270px] lg:pr-[310px] h-[26rem] flex flex-col gap-4 animate-fade-in overflow-hidden"
           >
             <span className="font-action text-xs md:text-sm tracking-[0.25em] uppercase text-accent">
               {getTopic(current)}
@@ -172,14 +197,16 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
               </Typography>
             </div>
 
-            <div className="pt-4 flex items-center justify-between gap-4 flex-wrap">
-              <a
-                href={current.linkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="primary">Inscrever-se</Button>
-              </a>
+            <div className="pt-4 relative flex items-center justify-center">
+              <div className="absolute left-0">
+                <a
+                  href={current.linkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="primary">Inscrever-se</Button>
+                </a>
+              </div>
 
               <div
                 className="flex items-center gap-2"
@@ -201,25 +228,6 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
                     }`}
                   />
                 ))}
-              </div>
-
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={prev}
-                  aria-label="Palestrante anterior"
-                  className="w-10 h-10 rounded-full border border-card-border text-text-primary hover:border-accent hover:text-accent transition-colors flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent"
-                >
-                  <span aria-hidden="true">&larr;</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={next}
-                  aria-label="Próximo palestrante"
-                  className="w-10 h-10 rounded-full border border-card-border text-text-primary hover:border-accent hover:text-accent transition-colors flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent"
-                >
-                  <span aria-hidden="true">&rarr;</span>
-                </button>
               </div>
             </div>
           </div>
