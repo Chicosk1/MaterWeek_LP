@@ -9,6 +9,14 @@ import superaLogo from '../assets/supera.svg';
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
+import edisonPhoto from '../assets/Edison.png';
+import leilaPhoto from '../assets/Leila.png';
+import rafaelPhoto from '../assets/Rafael.png';
+import alessandroPhoto from '../assets/Alessandro.png';
+import eduardoPhoto from '../assets/Eduardo.png';
+import kauhePhoto from '../assets/Kauhe.png';
+import rogerPhoto from '../assets/Roger.png';
+
 
 export const mockEvents: EventItem[] = [
   {
@@ -19,6 +27,7 @@ export const mockEvents: EventItem[] = [
     title: 'Edison Figueira Junior',
     description: 'Palestra - A Nova Engenharia de Software: IA, Agentes e Mentalidade Empreendedora',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [edisonPhoto],
   },
   {
     id: '2',
@@ -28,6 +37,7 @@ export const mockEvents: EventItem[] = [
     title: 'Leila Voss',
     description: 'Dinâmica - Do Problema a Solução: Tranformando Ideias em Inovação',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [leilaPhoto],
   },
   {
     id: '3',
@@ -37,6 +47,7 @@ export const mockEvents: EventItem[] = [
     title: 'Rafael Fernando Dal Bosco e Alessandro Graczyk Moraes',
     description: 'Talk - Além da Ideia: Crescimento, Escala e Sobrevivência',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [rafaelPhoto, alessandroPhoto],
   },
   {
     id: '4',
@@ -46,6 +57,7 @@ export const mockEvents: EventItem[] = [
     title: 'Eduardo Harthecopf',
     description: 'Workshop - Growth Marketing na prática: como tecnologia, dados e criatividade aceleram o crescimento de um negócio',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [eduardoPhoto],
   },
   {
     id: '5',
@@ -55,6 +67,7 @@ export const mockEvents: EventItem[] = [
     title: 'Kauhe Tissiani',
     description: 'Palestra - Gestão comercial e os desafios na comercialização de softwares',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [kauhePhoto],
   },
   {
     id: '6',
@@ -64,6 +77,7 @@ export const mockEvents: EventItem[] = [
     title: 'Roger Alexandre Rossoni',
     description: 'Palestra - Quem quer Dinheiro? Captação de Recursos e Estruturação de Projetos',
     linkUrl: 'https://www.materdei.edu.br/pt',
+    photoUrls: [rogerPhoto],
   },
   {
     id: '7',
