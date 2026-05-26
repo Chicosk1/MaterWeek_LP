@@ -1,6 +1,7 @@
 import { useEffect, useState, type FC } from 'react';
 import { mockEvents } from '../../data/mock';
 import type { EventItem } from '../../types';
+import { Button } from '../ui/Button';
 import { Typography } from '../ui/Typography';
 
 import calendarioIcon from '../../assets/calendario.svg';
@@ -174,6 +175,14 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
             </Typography>
 
             <div className="mt-auto pt-8 flex items-center justify-between gap-4 flex-wrap">
+              <a
+                href="https://www.materdei.edu.br/pt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="primary">Inscrever-se</Button>
+              </a>
+
               <div
                 className="flex items-center gap-2"
                 role="tablist"
