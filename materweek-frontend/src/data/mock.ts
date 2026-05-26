@@ -10,12 +10,15 @@ import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
 import alessandroPhoto from '../assets/Alessandro.png';
+import caitoPhoto from '../assets/Caito.png';
 import edisonPhoto from '../assets/Edison.png';
 import eduardoPhoto from '../assets/Eduardo.png';
+import joaoPhoto from '../assets/Joao.png';
 import kauhePhoto from '../assets/Kauhe.png';
 import leilaPhoto from '../assets/Leila.png';
 import rafaelPhoto from '../assets/Rafael.png';
 import rogerPhoto from '../assets/Roger.png';
+import thiagoPhoto from '../assets/Thiago.png';
 
 
 export const mockEvents: EventItem[] = [
@@ -101,6 +104,7 @@ export const mockEvents: EventItem[] = [
     shortDescription: 'O especialista em vendas nº 1 do Brasil, com mais de 20 anos de experiência.',
     longDescription: 'Thiago Concer é considerado o maior especialista em vendas do Brasil. Com mais de 20 anos de carreira e milhares de profissionais treinados, ele traz um conteúdo direto ao ponto sobre como vender mais, melhor e com consistência.',
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
+    photoUrls: [thiagoPhoto],
   },
   {
     id: '8',
@@ -112,6 +116,7 @@ export const mockEvents: EventItem[] = [
     shortDescription: 'Fundador da Chilli Beans, referência em branding e varejo no Brasil.',
     longDescription: 'Caito Maia é o fundador da Chilli Beans, marca que revolucionou o varejo de óculos no Brasil. Ele compartilha a jornada de construir uma das marcas mais reconhecidas do país — da ideia irreverente ao negócio com presença global.',
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
+    photoUrls: [caitoPhoto],
   },
   {
     id: '9',
@@ -123,6 +128,7 @@ export const mockEvents: EventItem[] = [
     shortDescription: 'Um dos 10 melhores profissionais de Marketing do Brasil, ex-VP no McDonald\'s.',
     longDescription: 'João Branco é considerado um dos 10 melhores profissionais de Marketing do Brasil. Ex-VP de Marketing do McDonald\'s, ele fala sobre como construir marcas que conectam emocionalmente com as pessoas e geram resultados reais de negócio.',
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
+    photoUrls: [joaoPhoto],
   },
 ];
 
