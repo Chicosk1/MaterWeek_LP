@@ -51,7 +51,7 @@ export const mockEvents: EventItem[] = [
     title: 'Rafael Fernando Dal Bosco e Alessandro Graczyk Moraes',
     topic: 'TALK',
     shortDescription: 'Os desafios reais de crescer, escalar e sobreviver no mercado.',
-    longDescription: 'Além da Ideia: Crescimento, Escala e Sobrevivência. Rafael e Alessandro compartilham experiências de quem já passou pelos bastidores do empreendedorismo — as decisões difíceis, os erros que ensinam e as estratégias que realmente funcionam para escalar um negócio.',
+    longDescription: 'Rafael e Alessandro compartilham experiências reais dos bastidores do empreendedorismo: decisões difíceis, erros que ensinam e as estratégias que realmente funcionam para crescer e escalar.',
     linkUrl: 'https://www.materdei.edu.br/pt',
     photoUrls: [rafaelPhoto, alessandroPhoto],
   },

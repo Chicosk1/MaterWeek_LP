@@ -51,14 +51,14 @@ const Portrait: FC<PortraitProps> = ({ photos, name, className = '' }) => {
   }
 
   return (
-    <div className={`flex items-end justify-center gap-1 ${className}`}>
+    <div className={`flex items-end justify-center gap-3 ${className}`}>
       {photos.map((src, i) => (
         <img
           key={i}
           src={src}
           alt=""
           loading="lazy"
-          className="h-full max-w-[55%] object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)]"
+          className="h-[90%] max-w-[46%] object-contain object-bottom drop-shadow-[0_15px_40px_rgba(0,229,255,0.25)]"
         />
       ))}
     </div>
@@ -148,7 +148,10 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
               {getTopic(current)}
             </span>
 
-            <Typography variant="h1" className="text-3xl md:text-5xl">
+            <Typography
+              variant="h1"
+              className={`line-clamp-2 ${current.title.length > 30 ? 'text-xl md:text-3xl' : 'text-3xl md:text-5xl'}`}
+            >
               {current.title}
             </Typography>
 
@@ -163,11 +166,13 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
               </div>
             </div>
 
-            <Typography variant="body" className="max-w-2xl line-clamp-4">
-              {current.longDescription}
-            </Typography>
+            <div className="flex-1 min-h-0 overflow-y-auto scrollbar-accent pr-1">
+              <Typography variant="body" className="max-w-2xl">
+                {current.longDescription}
+              </Typography>
+            </div>
 
-            <div className="mt-auto pt-8 flex items-center justify-between gap-4 flex-wrap">
+            <div className="pt-4 flex items-center justify-between gap-4 flex-wrap">
               <a
                 href="https://www.materdei.edu.br/pt"
                 target="_blank"
