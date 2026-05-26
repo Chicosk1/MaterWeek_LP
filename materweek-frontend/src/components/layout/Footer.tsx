@@ -13,6 +13,7 @@ export const Footer: FC = () => {
         <p>&copy; 2026 TechWeek BY Sistemas de Informação - 5° Período.</p>
         <div className="flex flex-wrap justify-center gap-4 mt-2">
           <a href="#eventos" className="hover:text-accent transition-colors">Eventos</a>
+          <a href="#palestrantes" className="hover:text-accent transition-colors">Palestrantes</a>
           <a href="#patrocinadores" className="hover:text-accent transition-colors">Patrocinadores</a>
         </div>
       </div>

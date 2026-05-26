@@ -13,6 +13,7 @@ export const Header: FC = () => {
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-body text-text-primary">
           <a href="#eventos" className="hover:text-accent transition-colors cursor-pointer">Eventos</a>
+          <a href="#palestrantes" className="hover:text-accent transition-colors cursor-pointer">Palestrantes</a>
           <a href="#patrocinadores" className="hover:text-accent transition-colors cursor-pointer">Patrocinadores</a>
         </nav>
 
