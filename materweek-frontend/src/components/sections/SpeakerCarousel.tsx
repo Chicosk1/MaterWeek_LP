@@ -150,7 +150,7 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
 
             <Typography
               variant="h1"
-              className={`line-clamp-2 ${current.title.length > 30 ? 'text-xl md:text-3xl' : 'text-3xl md:text-5xl'}`}
+              className={`line-clamp-2 pb-3 ${current.title.length > 30 ? 'text-xl md:text-3xl' : 'text-3xl md:text-5xl'}`}
             >
               {current.title}
             </Typography>

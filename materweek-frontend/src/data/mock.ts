@@ -48,7 +48,7 @@ export const mockEvents: EventItem[] = [
     iconUrl: SILogo,
     date: '16 / jun às 19:30h',
     location: 'Auditório UNIMATER',
-    title: 'Rafael Fernando Dal Bosco e Alessandro Graczyk Moraes',
+    title: 'Rafael Dal Bosco e Alessandro Graczyk Moraes',
     topic: 'TALK',
     shortDescription: 'Os desafios reais de crescer, escalar e sobreviver no mercado.',
     longDescription: 'Como uma ideia se transforma em uma empresa consolidada? Nesta talk, dois empresários da área da tecnologia compartilham experiências reais sobre incubação, crescimento, desafios do mercado e o que realmente significa escalar um negócio de forma sustentável.',
