@@ -3,29 +3,31 @@ import { mockSponsors } from '../../data/mock';
 import { Typography } from '../ui/Typography';
 
 export const SponsorsSection: FC = () => {
-  const sponsorsNames = mockSponsors.map(s => s.name);
-  const marqueeItems = [...sponsorsNames, ...sponsorsNames, ...sponsorsNames];
+  const marqueeItems = [...mockSponsors, ...mockSponsors, ...mockSponsors];
 
   return (
-    <section id="patrocinadores" className="py-12 border-t border-card-border/50 overflow-hidden bg-background">
+    <section id="patrocinadores" className="py-12 overflow-hidden bg-background">
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <Typography variant="small" className="text-center tracking-widest uppercase font-semibold opacity-60">
           Quem faz acontecer
         </Typography>
       </div>
-      
+
       <div className="relative w-full flex overflow-hidden">
         <div className="absolute inset-y-0 left-0 w-24 bg-linear-to-r from-background to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-24 bg-linear-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
         <div className="flex w-max animate-marquee gap-16 px-8 items-center opacity-40 hover:opacity-100 transition-opacity duration-500" aria-hidden="true">
-          {marqueeItems.map((name, index) => (
-            <span key={index} className="font-heading font-bold text-2xl tracking-wider whitespace-nowrap text-text-primary grayscale hover:grayscale-0 transition-all">
-              {name}
-            </span>
+          {marqueeItems.map((sponsor, index) => (
+            <img
+              key={index}
+              src={sponsor.logoUrl}
+              alt={sponsor.altText}
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
           ))}
         </div>
-        
+
         <div className="sr-only">
           <ul>
             {mockSponsors.map(sponsor => (

@@ -71,7 +71,11 @@ const Portrait: FC<PortraitProps> = ({ photos, name, className = '' }) => {
   );
 };
 
-export const SpeakerCarousel: FC = () => {
+interface SpeakerCarouselProps {
+  activeSpeakerId?: string | null;
+}
+
+export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) => {
   const speakers = [...mockEvents].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
   );
@@ -79,6 +83,12 @@ export const SpeakerCarousel: FC = () => {
   const total = speakers.length;
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (!activeSpeakerId) return;
+    const idx = speakers.findIndex((s) => s.id === activeSpeakerId);
+    if (idx !== -1) setIndex(idx);
+  }, [activeSpeakerId]);
 
   useEffect(() => {
     if (isPaused || total <= 1) return;

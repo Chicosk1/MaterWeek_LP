@@ -7,11 +7,19 @@ import { Typography } from '../ui/Typography';
 import calendarioIcon from '../../assets/calendario.svg';
 import pinoMapaIcon from '../../assets/pino_mapa.svg';
 
-export const EventsSection: FC = () => {
-  // 1. Cria uma cópia da array e ordena pela data (da mais próxima para a mais distante)
+interface EventsSectionProps {
+  onSpeakerFocus?: (id: string) => void;
+}
+
+export const EventsSection: FC<EventsSectionProps> = ({ onSpeakerFocus }) => {
   const sortedEvents = [...mockEvents].sort((a, b) => {
     return new Date(a.date).getTime() - new Date(b.date).getTime();
   });
+
+  const handleSaibaMais = (id: string) => {
+    onSpeakerFocus?.(id);
+    document.getElementById('palestrantes')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section id="eventos" className="px-6 py-12 flex flex-col gap-8 scroll-mt-20">
@@ -46,16 +54,13 @@ export const EventsSection: FC = () => {
               </div>
 
               <div className="mt-auto pt-2 flex justify-start">
-                <a 
-                  href={event.linkUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-block"
+                <Button
+                  variant="ghost"
+                  aria-label={`Saiba mais sobre a palestra de ${event.title}`}
+                  onClick={() => handleSaibaMais(event.id)}
                 >
-                  <Button variant="ghost" aria-label={`Saiba mais sobre a palestra de ${event.title}`}>
-                    Saiba mais <span aria-hidden="true">&rarr;</span>
-                  </Button>
-                </a>
+                  Saiba mais <span aria-hidden="true">&rarr;</span>
+                </Button>
               </div>
             </CardBase>
           ))}

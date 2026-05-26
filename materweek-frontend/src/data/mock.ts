@@ -1,20 +1,20 @@
 import type { EventItem, Sponsor } from '../types';
 
 import aconcaiaLogo from '../assets/aconcaia.svg';
-import naturalBitLogo from '../assets/Natural-Bit-preto-e-laranja.svg';
-import idsLogo from '../assets/ids.svg';
 import aiqfomeLogo from '../assets/aiqfome.svg';
+import idsLogo from '../assets/ids.svg';
+import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
-import edisonPhoto from '../assets/Edison.png';
-import leilaPhoto from '../assets/Leila.png';
-import rafaelPhoto from '../assets/Rafael.png';
 import alessandroPhoto from '../assets/Alessandro.png';
+import edisonPhoto from '../assets/Edison.png';
 import eduardoPhoto from '../assets/Eduardo.png';
 import kauhePhoto from '../assets/Kauhe.png';
+import leilaPhoto from '../assets/Leila.png';
+import rafaelPhoto from '../assets/Rafael.png';
 import rogerPhoto from '../assets/Roger.png';
 
 

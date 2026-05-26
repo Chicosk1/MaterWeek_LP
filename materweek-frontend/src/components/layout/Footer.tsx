@@ -3,7 +3,7 @@ import logoIcon from '../../assets/logo_si.svg';
 
 export const Footer: FC = () => {
   return (
-    <footer className="px-6 py-10 mt-auto border-t border-card-border bg-background flex flex-col items-center text-center gap-6">
+    <footer className="px-6 py-10 mt-auto bg-background flex flex-col items-center text-center gap-6">
       <div className="flex items-center gap-2 text-accent font-heading font-bold text-xl tracking-wider">
         <img src={logoIcon} alt="TechWeek Logo" className="w-6 h-6" />
         TechWeek
