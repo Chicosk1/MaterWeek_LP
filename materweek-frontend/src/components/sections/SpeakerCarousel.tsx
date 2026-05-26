@@ -197,40 +197,39 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
               </Typography>
             </div>
 
-            <div className="pt-4 relative flex items-center justify-center">
-              <div className="absolute left-0">
-                <a
-                  href={current.linkUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="primary">Inscrever-se</Button>
-                </a>
-              </div>
-
-              <div
-                className="flex items-center gap-2"
-                role="tablist"
-                aria-label="Selecionar palestrante"
+            <div className="pt-4">
+              <a
+                href={current.linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {speakers.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={i === index}
-                    aria-label={`Ver palestrante ${i + 1} de ${total}: ${s.title}`}
-                    onClick={() => goTo(i)}
-                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent ${
-                      i === index
-                        ? 'w-8 bg-accent'
-                        : 'w-2 bg-card-border hover:bg-text-secondary'
-                    }`}
-                  />
-                ))}
-              </div>
+                <Button variant="primary">Inscrever-se</Button>
+              </a>
             </div>
           </div>
+        </div>
+
+        {/* Dots abaixo do card, centralizados */}
+        <div
+          className="flex items-center justify-center gap-2 mt-4"
+          role="tablist"
+          aria-label="Selecionar palestrante"
+        >
+          {speakers.map((s, i) => (
+            <button
+              key={s.id}
+              type="button"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`Ver palestrante ${i + 1} de ${total}: ${s.title}`}
+              onClick={() => goTo(i)}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-accent ${
+                i === index
+                  ? 'w-8 bg-accent'
+                  : 'w-2 bg-card-border hover:bg-text-secondary'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
