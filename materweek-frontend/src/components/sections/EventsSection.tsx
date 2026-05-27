@@ -25,7 +25,7 @@ export const EventsSection: FC<EventsSectionProps> = ({ onSpeakerFocus }) => {
     <section id="eventos" className="px-6 py-12 flex flex-col gap-8 scroll-mt-20">
       <div className="max-w-7xl mx-auto w-full">
         <div className="mb-10 text-center md:text-left">
-          <Typography variant="h2" className="mb-2">Próximos Eventos</Typography>
+          <Typography variant="h2" className="mb-2">Programação Completa</Typography>
           <Typography variant="body">Explore as trilhas de conhecimento e palestras confirmadas.</Typography>
         </div>
 
