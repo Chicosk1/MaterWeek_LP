@@ -141,8 +141,8 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
           </button>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,229,255,0.10)_0,transparent_60%)] rounded-2xl pointer-events-none" />
 
-          {/* Mobile: círculo(s) centralizado(s) acima do conteúdo */}
-          <div className="md:hidden flex items-center justify-center py-8" aria-hidden="true">
+          {/* Mobile/Tablet: círculo(s) centralizado(s) acima do conteúdo */}
+          <div className="lg:hidden flex items-center justify-center py-8" aria-hidden="true">
             <Portrait
               key={`m-${current.id}`}
               photos={current.photoUrls}
@@ -153,7 +153,7 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
 
           {/* Desktop: círculo(s) centralizado(s) verticalmente à direita */}
           <div
-            className="hidden md:flex absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 w-56 lg:w-64 items-center justify-center pointer-events-none"
+            className="hidden lg:flex absolute right-6 xl:right-10 top-1/2 -translate-y-1/2 w-56 xl:w-64 items-center justify-center pointer-events-none"
             aria-hidden="true"
           >
             <Portrait
@@ -167,15 +167,15 @@ export const SpeakerCarousel: FC<SpeakerCarouselProps> = ({ activeSpeakerId }) =
           {/* Content */}
           <div
             key={current.id}
-            className="relative p-6 md:p-10 md:pr-[270px] lg:pr-[310px] h-[26rem] flex flex-col gap-4 animate-fade-in overflow-hidden"
+            className="relative p-6 lg:p-10 lg:pr-[270px] xl:pr-[310px] lg:h-[26rem] flex flex-col gap-4 animate-fade-in lg:overflow-hidden"
           >
-            <span className="font-action text-xs md:text-sm tracking-[0.25em] uppercase text-accent">
+            <span className="font-action text-xs lg:text-sm tracking-[0.25em] uppercase text-accent">
               {getTopic(current)}
             </span>
 
             <Typography
               variant="h1"
-              className={`line-clamp-2 pb-3 ${current.title.length > 30 ? 'text-xl md:text-3xl' : 'text-3xl md:text-5xl'}`}
+              className={`lg:line-clamp-2 lg:pb-3 ${current.title.length > 30 ? 'text-xl lg:text-3xl' : 'text-3xl lg:text-5xl'}`}
             >
               {current.title}
             </Typography>

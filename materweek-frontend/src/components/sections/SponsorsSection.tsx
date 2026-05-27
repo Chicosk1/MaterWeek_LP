@@ -17,7 +17,7 @@ export const SponsorsSection: FC = () => {
         <div className="absolute inset-y-0 left-0 w-24 bg-linear-to-r from-background to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-24 bg-linear-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
-        <div className="flex w-max animate-marquee gap-16 px-8 items-center opacity-40 hover:opacity-100 transition-opacity duration-500" aria-hidden="true">
+        <div className="flex w-max animate-marquee gap-16 px-8 items-center opacity-100 transition-opacity duration-500" aria-hidden="true">
           {marqueeItems.map((sponsor, index) => (
             <img
               key={index}
