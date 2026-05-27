@@ -5,7 +5,7 @@ import aiqfomeLogo from '../assets/aiqfome.svg';
 import idsLogo from '../assets/ids.svg';
 import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
-import panseraLogo from '../assets/pansera.svg'
+import panseraLogo from '../assets/pansera.svg';
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
