@@ -9,14 +9,13 @@ import superaLogo from '../assets/supera.svg';
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
-import alessandroPhoto from '../assets/Alessandro.png';
 import caitoPhoto from '../assets/Caito.png';
 import edisonPhoto from '../assets/Edison.png';
 import eduardoPhoto from '../assets/Eduardo.png';
 import joaoPhoto from '../assets/Joao.png';
 import kauhePhoto from '../assets/Kauhe.png';
 import leilaPhoto from '../assets/Leila.png';
-import rafaelPhoto from '../assets/Rafael.png';
+import rafaelalessandroPhoto from '../assets/RafaelAlessandro.png';
 import rogerPhoto from '../assets/Roger.png';
 import thiagoPhoto from '../assets/Thiago.png';
 
@@ -56,7 +55,7 @@ export const mockEvents: EventItem[] = [
     shortDescription: 'Os desafios reais de crescer, escalar e sobreviver no mercado.',
     longDescription: 'Como uma ideia se transforma em uma empresa consolidada? Nesta talk, dois empresários da área da tecnologia compartilham experiências reais sobre incubação, crescimento, desafios do mercado e o que realmente significa escalar um negócio de forma sustentável.',
     linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
-    photoUrls: [rafaelPhoto, alessandroPhoto],
+    photoUrls: [rafaelalessandroPhoto],
   },
   {
     id: '4',
