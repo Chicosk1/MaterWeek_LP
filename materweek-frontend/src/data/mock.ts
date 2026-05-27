@@ -5,6 +5,7 @@ import aiqfomeLogo from '../assets/aiqfome.svg';
 import idsLogo from '../assets/ids.svg';
 import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
+import panseraLogo from '../assets/pansera.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
@@ -136,7 +137,6 @@ export const mockSponsors: Sponsor[] = [
   { id: '2', name: 'Aconcaia', logoUrl: aconcaiaLogo, altText: 'Aconcaia Logo' },
   { id: '3', name: 'Supera', logoUrl: superaLogo, altText: 'Supera Logo' },
   { id: '4', name: 'IDS', logoUrl: idsLogo, altText: 'IDS Logo' },
-  { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' }
-  // { id: '6', name: 'Pizarria Franciscana', logoUrl: pizarriaFranciscanaLogo, altText: 'Pizarria Franciscana Logo' },
-  // { id: '7', name: 'Pastelaria Pancera', logoUrl: pastelariaPanceraLogo, altText: 'Pastelaria Pancera Logo' }
+  { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' },
+  { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' }
 ];

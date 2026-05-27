@@ -23,7 +23,7 @@ export const SponsorsSection: FC = () => {
               key={index}
               src={sponsor.logoUrl}
               alt={sponsor.altText}
-              className="h-20 w-32 object-contain grayscale hover:grayscale-0 transition-all"
+              className="h-20 w-32 object-contain transition-all"
             />
           ))}
         </div>
