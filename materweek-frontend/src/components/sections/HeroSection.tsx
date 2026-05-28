@@ -21,7 +21,7 @@ export const HeroSection: FC = () => {
       </Typography>
 
       <div className="flex flex-col md:flex-row w-full gap-4 max-w-md mx-auto justify-center">
-        <a href="#eventos" className="w-full flex justify-center">
+        <a href="https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74" className="w-full flex justify-center">
           <Button variant="primary">
             Garantir minha vaga <span aria-hidden="true">&rarr;</span>
           </Button>
