@@ -6,6 +6,7 @@ import idsLogo from '../assets/ids.svg';
 import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
 import panseraLogo from '../assets/pansera.svg';
+import atlasLogo from '../assets/atlas.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
@@ -138,5 +139,6 @@ export const mockSponsors: Sponsor[] = [
   { id: '3', name: 'Supera', logoUrl: superaLogo, altText: 'Supera Logo' },
   { id: '4', name: 'IDS', logoUrl: idsLogo, altText: 'IDS Logo' },
   { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' },
-  { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' }
+  { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' },
+  { id: '7', name: 'Atlas', logoUrl: atlasLogo, altText: 'Atlas Logo' }
 ];
