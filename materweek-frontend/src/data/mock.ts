@@ -6,6 +6,7 @@ import idsLogo from '../assets/ids.svg';
 import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
 import panseraLogo from '../assets/pansera.svg';
+import atlasLogo from '../assets/atlas.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
@@ -65,8 +66,8 @@ export const mockEvents: EventItem[] = [
     location: 'Auditório UNIMATER',
     title: 'Eduardo Harthecopf',
     topic: 'WORKSHOP',
-    shortDescription: 'Como tecnologia, dados e criatividade aceleram o crescimento.',
-    longDescription: 'Uma conversa sobre crescimento de negócios na prática, com experiências reais do mercado. Além da trajetória profissional do palestrante, o encontro também busca apresentar aos participantes possibilidades e experiências que podem surgir ao empreender e desenvolver um negócio próprio.',
+    shortDescription: 'Growth Marketing na prática: como tecnologia, dados e criatividade aceleram o crescimento de um negócio.',
+    longDescription: 'Neste workshop, Eduardo apresenta uma visão prática e estratégica sobre como empresas podem crescer de forma mais inteligente, conectando marketing, tecnologia, dados, criatividade e execução. Durante a atividade, os participantes serão conduzidos por um framework prático de Growth aplicado a um desafio realista de mercado, entendendo como pensar crescimento de forma estruturada, identificar oportunidades e transformar ideias em ações com potencial de resultado.',
     linkUrl: 'https://materdei.jacad.com.br/academico/eventos/programacao-do-evento/74',
     photoUrls: [eduardoPhoto],
   },
@@ -138,5 +139,6 @@ export const mockSponsors: Sponsor[] = [
   { id: '3', name: 'Supera', logoUrl: superaLogo, altText: 'Supera Logo' },
   { id: '4', name: 'IDS', logoUrl: idsLogo, altText: 'IDS Logo' },
   { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' },
-  { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' }
+  { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' },
+  { id: '7', name: 'Atlas', logoUrl: atlasLogo, altText: 'Atlas Logo' }
 ];
