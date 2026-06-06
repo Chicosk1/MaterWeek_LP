@@ -7,6 +7,12 @@ import naturalBitLogo from '../assets/natural-bit.svg';
 import superaLogo from '../assets/supera.svg';
 import panseraLogo from '../assets/pansera.svg';
 import atlasLogo from '../assets/atlas.svg';
+import viasoftLogo from '../assets/Viasoft_Logo.svg';
+import uplabLogo from '../assets/LOGO-UPLAB.svg';
+import logoSimpla from '../assets/Logo-Simpla.svg';
+import logoSafe from '../assets/Logo-SAFE.svg';
+import rpLogo from '../assets/Logo-RP.svg';
+import franciscanaLogo from '../assets/LOGO-FRANCISCANA.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
@@ -140,5 +146,11 @@ export const mockSponsors: Sponsor[] = [
   { id: '4', name: 'IDS', logoUrl: idsLogo, altText: 'IDS Logo' },
   { id: '5', name: 'AiqFome', logoUrl: aiqfomeLogo, altText: 'AiqFome Logo' },
   { id: '6', name: 'Pastelaria Pancera', logoUrl: panseraLogo, altText: 'Pastelaria Pancera Logo' },
-  { id: '7', name: 'Atlas', logoUrl: atlasLogo, altText: 'Atlas Logo' }
+  { id: '7', name: 'Atlas', logoUrl: atlasLogo, altText: 'Atlas Logo' },
+  { id: '8', name: 'Viasoft', logoUrl: viasoftLogo, altText: 'Viasoft Logo' },
+  { id: '9', name: 'UPLAB', logoUrl: uplabLogo, altText: 'UPLAB Logo' },
+  { id: '10', name: 'Simpla', logoUrl: logoSimpla, altText: 'Simpla Logo' },
+  { id: '11', name: 'Safe', logoUrl: logoSafe, altText: 'Safe Logo' },
+  { id: '12', name: 'RP', logoUrl: rpLogo, altText: 'RP Logo' },
+  { id: '13', name: 'Fransiscana', logoUrl: franciscanaLogo, altText: 'Fransiscana Logo' },
 ];
