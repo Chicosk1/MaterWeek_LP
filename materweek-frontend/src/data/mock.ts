@@ -2,24 +2,24 @@ import type { EventItem, Sponsor } from '../types';
 
 import aconcaiaLogo from '../assets/aconcaia.svg';
 import aiqfomeLogo from '../assets/aiqfome.svg';
-import idsLogo from '../assets/ids.svg';
-import naturalBitLogo from '../assets/natural-bit.svg';
-import superaLogo from '../assets/supera.svg';
-import panseraLogo from '../assets/pansera.svg';
 import atlasLogo from '../assets/atlas.svg';
-import viasoftLogo from '../assets/Viasoft_Logo.svg';
-import uplabLogo from '../assets/LOGO-UPLAB.svg';
-import logoSimpla from '../assets/Logo-Simpla.svg';
-import logoSafe from '../assets/Logo-SAFE.svg';
-import rpLogo from '../assets/Logo-RP.svg';
+import idsLogo from '../assets/ids.svg';
 import franciscanaLogo from '../assets/LOGO-FRANCISCANA.svg';
+import rpLogo from '../assets/Logo-RP.svg';
+import logoSafe from '../assets/Logo-SAFE.svg';
+import logoSimpla from '../assets/Logo-Simpla.svg';
+import uplabLogo from '../assets/LOGO-UPLAB.svg';
+import naturalBitLogo from '../assets/natural-bit.svg';
+import panseraLogo from '../assets/pansera.svg';
+import superaLogo from '../assets/supera.svg';
+import viasoftLogo from '../assets/Viasoft_Logo.svg';
 
 import SILogo from '../assets/logo_si.svg';
 import sebraeLogo from '../assets/sebrae.svg';
 
-import caitoPhoto from '../assets/Caito.png';
 import edisonPhoto from '../assets/Edison.png';
 import eduardoPhoto from '../assets/Eduardo.png';
+import gilPhoto from '../assets/Gil.png';
 import joaoPhoto from '../assets/Joao.png';
 import kauhePhoto from '../assets/Kauhe.png';
 import leilaPhoto from '../assets/Leila.png';
@@ -118,12 +118,12 @@ export const mockEvents: EventItem[] = [
     iconUrl: sebraeLogo,
     date: '19 / jun às 19:00h',
     location: 'Centro Regional de Eventos de Pato Branco',
-    title: 'Caito Maia',
+    title: 'Gil Giardelli',
     topic: 'PALESTRA',
-    shortDescription: 'Fundador da Chilli Beans, referência em branding e varejo no Brasil.',
-    longDescription: 'Caito Maia é o fundador da Chilli Beans, marca que revolucionou o varejo de óculos no Brasil. Ele compartilha a jornada de construir uma das marcas mais reconhecidas do país — da ideia irreverente ao negócio com presença global. Esta atividade faz parte da Feira do Empreendedor, coordenada pelo SEBRAE Pato Branco',
+    shortDescription: 'Professor, futurista, autor e palestrante internacional, referência global em Inteligência Artificial.',
+    longDescription: 'Gil Giardelli, com mais de 27 anos de experiência, lecionou como professor em instituições renomadas, como Stanford e MIT, e já realizou mais de 1.500 palestras, incluindo TEDx.',
     linkUrl: 'https://sebraepr.com.br/lp/feirapatobranco/?srsltid=AfmBOorE1gDLNUq27jZqCCrofJTaI-5lkfUOF8BEopR51s9hQvUR_PJK#inscreva-se',
-    photoUrls: [caitoPhoto],
+    photoUrls: [gilPhoto],
   },
   {
     id: '9',
